@@ -4,7 +4,7 @@ class DNA {
   int[] weightnum = new int [25];
   int[] valuenum = new int [25];
   
-  int score = 0;
+  int score = 0, totalweight, totalvalue;
   float fitness, mutationRate = 0.05;
   
   DNA(){
@@ -22,23 +22,14 @@ class DNA {
   }
   
   void fitness() {
-
-     for (int i = 0; i < genes.length; i++) {
+    if(totalweight == 5000){
+     /*for (int i = 0; i < genes.length; i++) {
         if (genes[i] == target.charAt(i)) {
           score++;
         }
      }
-     fitness = float(score)/target.length();
-  }
-    
-   DNA crossover(DNA partner) {
-    DNA child = new DNA(genes.length);
-    int midpoint = int(random(genes.length));
-    for (int i = 0; i < genes.length; i++) {
-      if (i > midpoint) child.genes[i] = genes[i];
-      else              child.genes[i] = partner.genes[i];
+     fitness = float(score)/target.length();*/
     }
-    return child;
   }
     void mutate(float mutationRate) {
     for (int i = 0; i < genes.length; i++) {
